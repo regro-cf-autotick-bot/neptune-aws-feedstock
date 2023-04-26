@@ -1,6 +1,6 @@
 {% set name = "neptune-aws" %}
 {% set package_name = "neptune_aws" %}
-{% set version = "0.1.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ package_name }}-{{ version }}.tar.gz
-  sha256: e99748d682546fd1460a69de7e2c58920206e7bf83f5585acabe1f0571cc510e
+  sha256: cb7fd40e044db568b2c267c05f669dcca305b028b0223b70cc79c7368ae6b351
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -40,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Utilities for using Neptune client on AWS'
+  summary: Utilities for using Neptune client on AWS
   doc_url: https://docs.neptune.ai/integrations-and-supported-tools/
   dev_url: https://github.com/neptune-ai/{{ name }}
 
