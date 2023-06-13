@@ -1,6 +1,6 @@
 {% set name = "neptune-aws" %}
 {% set package_name = "neptune_aws" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ package_name }}-{{ version }}.tar.gz
-  sha256: 74f0ab3f7fa5f4bf9574ef004f72591054576e417a86a094af34691bd7ff7dae
+  sha256: cb7fd40e044db568b2c267c05f669dcca305b028b0223b70cc79c7368ae6b351
 
 build:
   number: 0
