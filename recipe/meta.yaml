@@ -11,18 +11,18 @@ source:
   sha256: 06966f28e801c62f50e4495030b79e99f40f65a173188cb77b2327469af4f28b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - neptune-client >=0.15.0
     - boto3
 
@@ -32,6 +32,7 @@ test:
     - neptune_aws.impl
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
